@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body data-page="{{ pageKey }}">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <div class="preloader" id="preloader">
+      <div class="preloader-content">
+        <div class="preloader-logo">MS</div>
+        <div class="preloader-bar">
+          <div class="preloader-progress"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+    <div class="bg-animation" aria-hidden="true"></div>
+    <div class="bg-mesh" aria-hidden="true"></div>
+    <div class="bg-grid" aria-hidden="true"></div>
+
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="orb orb-3" aria-hidden="true"></div>
+    <div class="orb orb-4" aria-hidden="true"></div>
+
+    <div class="particles-container" id="particles" aria-hidden="true"></div>
+
+    <div
+      class="shooting-star"
+      aria-hidden="true"
+      style="top: 10%; left: 10%; animation-delay: 0s"
+    ></div>
+    <div
+      class="shooting-star"
+      aria-hidden="true"
+      style="top: 30%; left: 20%; animation-delay: 2s"
+    ></div>
+    <div
+      class="shooting-star"
+      aria-hidden="true"
+      style="top: 50%; left: 5%; animation-delay: 4s"
+    ></div>
+    <div
+      class="shooting-star"
+      aria-hidden="true"
+      style="top: 70%; left: 15%; animation-delay: 6s"
+    ></div>
+
+    <nav id="navbar" aria-label="Main navigation">
+      <div class="nav-container">
+        <a class="logo" href="/index.html" aria-label="Go to home">MS</a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/skills.html">Skills</a></li>
+          <li><a href="/experience.html">Experience</a></li>
+          <li><a href="/projects.html">Projects</a></li>
+          <li><a href="/education.html">Education</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="navLinks"
+          type="button"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <main id="main-content">{{ content | safe }}</main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-brand">
+          <span class="footer-logo">MS</span>
+          <span class="footer-text"
+            >© <span id="currentYear">2026</span> Michael Schott. All rights
+            reserved.</span
+          >
+        </div>
+
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+          <a href="/skills.html">Skills</a>
+          <a href="/experience.html">Experience</a>
+          <a href="/projects.html">Projects</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+
+        <div class="footer-social">
+          <a
+            href="https://linkedin.com/in/michael-schott"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="LinkedIn"
+            >💼</a
+          >
+          <a
+            href="https://github.com/michael-schott"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="GitHub"
+            >👨‍💻</a
+          >
+          <a href="mailto:michael.schott@netlight.com" title="Email">📧</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/assets/main.js"></script>
+  </body>
+</html>
